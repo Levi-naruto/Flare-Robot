@@ -296,26 +296,26 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Disaster level of this person is <b>'Keyaru-Sama'</b>."
+        text += "\n\nThis person is my <b>'Prince Lemiel'</b>."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of the 'Healer'."
+        text += "\n\nThis user is Mage of the 'Arcane Stage'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Disaster level of this person is 'Knight'."
+        text += "\n\nThe Disaster level of this person is 'Zero Stage Mage'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Attacker'."
+        text += "\n\nThe Disaster level of this person is 'First Stage Mage'."
         disaster_level_present = True 
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Defender'."
+        text += "\n\nThe Disaster level of this person is 'Support Mage'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is 'Demi-Human'."
+        text += "\n\nThe Disaster level of this person is 'Saint Stage Mage'."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/Freia_Updates/5">◉</a>]'.format(
+        text += ' [<a href="https://t.me/Nero_Updates/4">✮</a>]'.format(
             bot.username,
         )
 
@@ -438,8 +438,8 @@ def stats(update, context):
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/Freia_Updates)\n\n"
-            + "╘══「 by [ᴀsᴛᴀ](https://t.me/Asta_Silva02) 」\n",
+            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/Nero_Updates)\n\n"
+            + "╘══「 by [Nαɾυƚσ](https://t.me/lord_seventh_hokage_naruto) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
         )
@@ -451,9 +451,9 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Freia_Updates/5)\n\n"
+                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Nero_Updates/4)\n\n"
                 )
-                + "╘══「 by [Asta](https://t.me/Asta_Silva02) 」\n"
+                + "╘══「 by [Nαɾυƚσ](https://t.me/lord_seventh_hokage_naruto) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -513,7 +513,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Erm... yeah, I only trust the Ackermans to set my bio.",
+                "Erm... yeah, I only trust the Arcanes to set my bio.",
             )
             return      
 
