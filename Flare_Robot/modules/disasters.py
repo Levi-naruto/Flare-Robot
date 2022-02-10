@@ -65,20 +65,20 @@ def addpiro(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if int(user_id) in DEV_USERS:
-        message.reply_text("This member is already a Healer")
+        message.reply_text("This member is already an Arcane Stage Mage.")
 
     if user_id in DRAGONS:
-        rt += "Requested to promote a Knight to Healer."
+        rt += "Requested to promote a mage from Zero Stage to Arcane Stage."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "Requested to promote a Attacker to Healer."
+        rt += "Requested to promote amage from First Stage to Arcane Stage."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested to promote a Demi-Human to Healer."
+        rt += "Requested to promote a mage from Saint Stage to Arcane Stage."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -89,11 +89,11 @@ def addpiro(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + "\nSuccessfully set Disaster level of {} to Healer!".format(
+        rt + "\nSuccessfully set Disaster level of {} to Arcane Stage!".format(
             user_member.first_name))
 
     log_message = (
-        f"#ProDeveloper\n"
+        f"#ARCANE\n"
         f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
         f"<b>User:</b> {mention_html(user_member.id, html.escape(user_member.first_name))}"
     )
@@ -125,16 +125,16 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("This member is already a Knight")
+        message.reply_text("This member is already a Zero Stage Mage.")
         return ""
 
     if user_id in DEMONS:
-        rt += "Requested to promote a Attacker to Knight."
+        rt += "Requested to promote a mage from First Stage to Zero Stage."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested to promote a Demi-Human to Knight."
+        rt += "Requested to promote a mage from Saint Stage to Zero Stage."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -145,7 +145,7 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + "\nSuccessfully set Disaster level of {} to Knight!".format(
+        rt + "\nSuccessfully set Disaster level of {} to Zero Stage!".format(
             user_member.first_name))
 
     log_message = (
@@ -184,16 +184,16 @@ def addsupport(
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "Requested to demote this Knight to Attacker"
+        rt += "Requested to demote this mage from Zero Stage to First."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        message.reply_text("This user is already a Attacker.")
+        message.reply_text("This user is already a First Stage Mage.")
         return ""
 
     if user_id in WOLVES:
-        rt += "Requested to promote this Demi-Human to Attacker"
+        rt += "Requested to promote this mage from Saint Stage to First Stage."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -204,7 +204,7 @@ def addsupport(
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\n{user_member.first_name} was added as a Attacker!")
+        rt + f"\n{user_member.first_name} was added as a First Stage Mage!")
 
     log_message = (
         f"#SUPPORT\n"
@@ -239,17 +239,17 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Kinght, Demoting to Demi-Human."
+        rt += "This Mage is of Zero Stage rank, Demoting to Saint Stage."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is Attacker, Demoting to Demi-Humam."
+        rt += "This Mage is of First Stage rank, Demoting to Saint Stage."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        message.reply_text("This user is already a Demi-Human.")
+        message.reply_text("This user is already a Saint Stage Mage.")
         return ""
 
     data['whitelists'].append(user_id)
@@ -260,7 +260,7 @@ def addwhitelist(update: Update, context: CallbackContext) -> str:
 
     update.effective_message.reply_text(
         rt +
-        f"\nSuccessfully promoted {user_member.first_name} to a Demi-Human!")
+        f"\nSuccessfully promoted {user_member.first_name} to a Saint Stage Mage!")
 
     log_message = (
         f"#WHITELIST\n"
@@ -295,22 +295,22 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Knight, Demoting to Defender."
+        rt += "This Mage is of Zero Stage, Demoting to Support Mage."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is a Attacker, Demoting to Defender."
+        rt += "This user is a First Stage Mage, Demoting to Support Mage."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "This user is a Demi-Human, Demoting to Defender."
+        rt += "This user is a Saint Stage Mage, Demoting to Support Mage."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
     if user_id in TIGERS:
-        message.reply_text("This user is already a Defender.")
+        message.reply_text("This user is already a Support Stage Mage.")
         return ""
 
     data['tigers'].append(user_id)
@@ -321,7 +321,7 @@ def addtiger(update: Update, context: CallbackContext) -> str:
 
     update.effective_message.reply_text(
         rt +
-        f"\nSuccessfully promoted {user_member.first_name} to a Demi-Human!"
+        f"\nSuccessfully promoted {user_member.first_name} to a Support Stage Mage!"
     )
 
     log_message = (
@@ -378,7 +378,7 @@ def rmpiro(update: Update, context: CallbackContext) -> str:
         return log_message
 
     else:
-        message.reply_text("This user is not a Healer!")
+        message.reply_text("This Mage is not of an Arcane Stage!")
         return ""
 
 
@@ -422,7 +422,7 @@ def removesudo(update: Update, context: CallbackContext) -> str:
         return log_message
 
     else:
-        message.reply_text("This user is not a Knight!")
+        message.reply_text("This Mage is not of a Zero Stage!")
         return ""
 
 
@@ -465,7 +465,7 @@ def removesupport(update: Update, context: CallbackContext) -> str:
         return log_message
 
     else:
-        message.reply_text("This user is not a Attacker!")
+        message.reply_text("This Mage is not of a First Stage!")
         return ""
 
 
@@ -507,7 +507,7 @@ def removewhitelist(update: Update, context: CallbackContext) -> str:
 
         return log_message
     else:
-        message.reply_text("This user is not a Demi-Human!")
+        message.reply_text("This Mage is not of a Saint Stage!")
         return ""
 
 
@@ -548,14 +548,14 @@ def removetiger(update: Update, context: CallbackContext) -> str:
 
         return log_message
     else:
-        message.reply_text("This user is not a Defender!")
+        message.reply_text("This user is not a Support Mage!")
         return ""
 
 
 @run_async
 @whitelist_plus
 def whitelist(update: Update, context: CallbackContext):
-    reply = "<b>Known as Demi-Humans 🐺:</b>\n"
+    reply = "<b>Known as the Saint Stage Mages 🐺:</b>\n"
     bot = context.bot
     for each_user in WOLVES:
         user_id = int(each_user)
@@ -571,7 +571,7 @@ def whitelist(update: Update, context: CallbackContext):
 @run_async
 @whitelist_plus
 def tigerlist(update: Update, context: CallbackContext):
-    reply = "<b>Known as Difenders :</b>\n"
+    reply = "<b>Known as Support Mages :</b>\n"
     bot = context.bot
     for each_user in TIGERS:
         user_id = int(each_user)
@@ -587,7 +587,7 @@ def tigerlist(update: Update, context: CallbackContext):
 @whitelist_plus
 def supportlist(update: Update, context: CallbackContext):
     bot = context.bot
-    reply = "<b>Known As Attackers👹:</b>\n"
+    reply = "<b>Known As the First Stage Mages👹:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
@@ -603,7 +603,7 @@ def supportlist(update: Update, context: CallbackContext):
 def sudolist(update: Update, context: CallbackContext):
     bot = context.bot
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
-    reply = "<b>Known As Knights😈:</b>\n"
+    reply = "<b>Known As the Zero Stage Mages🐉:</b>\n"
     for each_user in true_sudo:
         user_id = int(each_user)
         try:
@@ -619,7 +619,7 @@ def sudolist(update: Update, context: CallbackContext):
 def devlist(update: Update, context: CallbackContext):
     bot = context.bot
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "<b>Retarded Marine Devs:</b>\n"
+    reply = "<b>Arcane Stage Mages, who can seal my wounds:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:
@@ -708,26 +708,26 @@ Group admins/group owners do not need these commands.
 Visit @Freia_Support for more information.
 """
 
-DEV_HANDLER = CommandHandler(("addpiro", "addheal"), addpiro)
-SUDO_HANDLER = CommandHandler(("addsudo", "addknight"), addsudo)
-SUPPORT_HANDLER = CommandHandler(("addsupport", "addattack"), addsupport)
-TIGER_HANDLER = CommandHandler(("adddefend"), addtiger)
-WHITELIST_HANDLER = CommandHandler(("adddemi", "addwolf"), addwhitelist)
+DEV_HANDLER = CommandHandler(("addpiro", "addarcane"), addpiro)
+SUDO_HANDLER = CommandHandler(("addsudo", "addzero"), addsudo)
+SUPPORT_HANDLER = CommandHandler(("addsupport", "addfirst"), addsupport)
+TIGER_HANDLER = CommandHandler(("adddefend","addsupportmage"), addtiger)
+WHITELIST_HANDLER = CommandHandler(("adddemi", "addsaint"), addwhitelist)
 
-RMPIRO_HANDLER = CommandHandler(("rmheal", "removesudo"), rmpiro)
-UNSUDO_HANDLER = CommandHandler(("removesudo", "rmknight"), removesudo)
-UNSUPPORT_HANDLER = CommandHandler(("removesupport", "rmattack"),
+RMPIRO_HANDLER = CommandHandler(("rmarcane", "removesudo"), rmpiro)
+UNSUDO_HANDLER = CommandHandler(("removesudo", "rmzero"), removesudo)
+UNSUPPORT_HANDLER = CommandHandler(("removesupport", "rmfirst"),
                                    removesupport)
-UNTIGER_HANDLER = CommandHandler(("rmdefend"), removetiger)
-UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "rmdemi"),
+UNTIGER_HANDLER = CommandHandler(("rmdefend","rmsupportmage"), removetiger)
+UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "rmsaint"),
                                      removewhitelist)
 
-WHITELISTLIST_HANDLER = CommandHandler(["whitelist", "demilist"],
+WHITELISTLIST_HANDLER = CommandHandler(["whitelist", "saints"],
                                        whitelist)
-TIGERLIST_HANDLER = CommandHandler(["defenders"], tigerlist)
-SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "attackers"], supportlist)
-SUDOLIST_HANDLER = CommandHandler(["sudolist", "knights"], sudolist)
-DEVLIST_HANDLER = CommandHandler(["devlist", "healers"], devlist)
+TIGERLIST_HANDLER = CommandHandler(["supportmages"], tigerlist)
+SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "listfirststage"], supportlist)
+SUDOLIST_HANDLER = CommandHandler(["sudolist", "listzerostage"], sudolist)
+DEVLIST_HANDLER = CommandHandler(["devlist", "listarcanes"], devlist)
 
 dispatcher.add_handler(DEV_HANDLER)
 dispatcher.add_handler(SUDO_HANDLER)
