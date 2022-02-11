@@ -107,7 +107,7 @@ buttons = [
     [
                         InlineKeyboardButton(
                             text=f"Add Nero To Your Group",
-                            url=f"https://telegram.dog/@{BOT_USERNAME}?startgroup=true")
+                            url=f"https://telegram.dog/secre_swallowtailbot?startgroup=true")
                     ],
                    [
                        InlineKeyboardButton(text="[► Help ◄]", callback_data="help_back"),
