@@ -33,6 +33,16 @@
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
          "value": ""
+      },
+      "BOT_ID": {
+         "description": "Get BOT_ID From From @BotFather.",
+         "required": true,
+         "value": ""
+      },
+      "BOT_USERNAME": {
+         "description": "Get BOT_USERNAME From From @BotFather.",
+         "required": true,
+         "value": ""
       },    
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
