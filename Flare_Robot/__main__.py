@@ -18,6 +18,7 @@ from Flare_Robot import (
     dispatcher,
     StartTime,
     telethn,
+    BOT_USERNAME,
     updater,
     pbot)
 
