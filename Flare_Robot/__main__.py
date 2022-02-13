@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-GROUP_START_IMG = "https://telegra.ph/file/5b6cde48c061a49332b6a.jpg"
+GROUP_START_IMG = "https://telegra.ph/file/0c0f6806f517f98edd2f9.mp4"
 
 FLARE_PHOTO = "https://telegra.ph/file/5b6cde48c061a49332b6a.jpg"
 
@@ -273,12 +273,15 @@ def start(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🚑 Support",
+                            text="Support",
                             url=f"https://telegram.dog/Nero_Support",
                         ),
                         InlineKeyboardButton(
-                            text="📢 Updates",
+                            text="Updates",
                             url="https://t.me/Nero_Updates",
+                        ),
+                        InlineKeyboardButton(
+                          text="HELP", url=f"https://t.me/secre_swallowtailbot?start=help",
                         ),
                     ]
                 ]
