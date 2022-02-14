@@ -454,7 +454,7 @@ def stats(update, context):
                     )
                     + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Nero_Updates/4)\n\n"
                 )
-                + "╘══「 by [Nαɾυƚσ](https://t.me/lord_seventh_hokage_naruto) 」\n"
+                + "╘══「 by [Nαɾυƚσ](https://t.me/{}) 」\n".format(OWNER_USERNAME)
             ),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
