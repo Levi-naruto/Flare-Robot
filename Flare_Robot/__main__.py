@@ -199,6 +199,7 @@ def test(update: Update, context: CallbackContext):
     print(update.effective_message)
 
 CHECK_MSG = f"**♡ I,m ɴᴇʀᴏ ʀᴏʙᴏᴛ 愛** \n\n**♡ I'm Working With sᴇxʏ Speed**\n\n**♡ ɴᴇʀᴏ: LATEST Version**\n\n**♡ My Creator:** [卐⁣༒ℕ₳ᏒꪙƬΘ༒卐⁣](t.me/{OWNER_USERNAME})\n\n**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Nero_Support **\n\n**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**\n\n"
+@run_async
 def awake(update: Update, context: CallbackContext):
     message = update.effective_message
     IMAGE = FLARE_PHOTO
