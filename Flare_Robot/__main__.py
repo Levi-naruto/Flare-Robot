@@ -198,27 +198,27 @@ def test(update: Update, context: CallbackContext):
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
 
-CHECK_MSG = f"**♡ I,m ɴᴇʀᴏ ʀᴏʙᴏᴛ 愛** \n\n**♡ I'm Working With sᴇxʏ Speed**\n\n**♡ ɴᴇʀᴏ: LATEST Version**\n\n**♡ My Creator:** [卐⁣༒ℕ₳ᏒꪙƬΘ༒卐⁣](t.me/{OWNER_USERNAME})\n\n**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Nero_Support **\n\n**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**\n\n"
-@run_async
-def awake(update: Update, context: CallbackContext):
-    message = update.effective_message
-    IMAGE = FLARE_PHOTO
-    msg = ""
-    msg += f"{CHECK_MSG}"
-    support = f"t.me/{nero_support}"
-    owner = f"t.me/{OWNER_USERNAME}"
-    updates = "t.me/nero_updates"
-    buttons = [
-	[InlineKeyboardButton("🚑 Support", url=support)],
-	[InlineKeyboardButton("📢 Updates", url=updates)]
-    ]
-    update.effective_message.reply_photo(
-	IMAGE,
-        caption=msg,
-        parse_mode=ParseMode.HTML,
-        reply_markup=InlineKeyboardMarkup(buttons)
-    )
-
+@telethn.on(events.NewMessage(pattern="/check"))
+async def awake(event):
+  ғʟᴀʀᴇ = event.sender.first_name
+  ғʟᴀʀᴇ = "**♡ I,m ɴᴇʀᴏ ʀᴏʙᴏᴛ 愛** \n\n"
+  ғʟᴀʀᴇ += "**♡ I'm Working With sᴇxʏ Speed**\n\n\n\n"
+  ғʟᴀʀᴇ += "**♡ ɴᴇʀᴏ: LATEST Version**\n\n**"
+  ғʟᴀʀᴇ += "**♡ My Creator:** [卐⁣༒ℕ₳ᏒꪙƬΘ༒卐](t.me/{OWNER_USERNAME})\n\n"
+  ғʟᴀʀᴇ += "****♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Nero_Support **\n\n"
+  ғʟᴀʀᴇ += "**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**\n\n"
+  FLARE_BUTTON = [
+      [
+          Button.url("🚑 Support", f"https://t.me/{SUPPORT_CHAT}"),
+          Button.url("📢 Updates", "https://t.me/Nero_Updates")
+      ]
+  ]
+  await telethn.send_file(
+      event.chat_id,
+      FLARE_PHOTO,
+      caption = ғʟᴀʀᴇ,
+      buttons = FLARE_BUTTON,
+  )
 
 @run_async
 def start(update: Update, context: CallbackContext):
@@ -671,7 +671,7 @@ def main():
 
     test_handler = CommandHandler("test", test)
     start_handler = CommandHandler("start", start)
-    check_handler = DisableAbleCommandHandler("check", awake)
+    #check_handler = DisableAbleCommandHandler("check", awake)
     help_handler = CommandHandler("help", get_help)
     help_callback_handler = CallbackQueryHandler(help_button, pattern=r"help_.*")
     
@@ -683,7 +683,7 @@ def main():
 
     # dispatcher.add_handler(test_handler)
     dispatcher.add_handler(start_handler)
-    dispatcher.add_handler(check_handler)
+    #dispatcher.add_handler(check_handler)
     dispatcher.add_handler(help_handler)
     dispatcher.add_handler(settings_handler)
     dispatcher.add_handler(help_callback_handler)
@@ -703,7 +703,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Flare Robot is deployed successfully!")
+        LOGGER.info("Nero Robot is deployed successfully!")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
