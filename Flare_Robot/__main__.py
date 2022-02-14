@@ -46,7 +46,7 @@ from telegram.ext import (
     MessageHandler,
 )
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
-from telegram import Message)
+from telegram import Message
 from telegram.ext import CallbackContext, CallbackQueryHandler
 from telegram.utils.helpers import escape_markdown
 from pyrogram import Client, idle
