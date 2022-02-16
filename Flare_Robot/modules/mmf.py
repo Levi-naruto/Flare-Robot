@@ -18,7 +18,7 @@ import cloudscraper
 import urllib.request as urllib
 
 
-
+Credit ="Kittu"
 
 @Flare(pattern="^/mmf ?(.*)")
 async def handler(event):
