@@ -48,8 +48,7 @@ async def handler(event):
     await msg.delete()    
     os.remove(meme)
 
-@run_async
-def drawText(image_path, text):
+async def drawText(image_path, text):
     img = Image.open(image_path)
     os.remove(image_path)
     shadowcolor = "black"
