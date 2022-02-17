@@ -652,7 +652,7 @@ async def awake(event):
             Button.url("📢 ᴍʏ ᴅᴀʀʟɪɴɢ", "https://t.me/Asta_silva02"),
             Button.url("🚑 ᴍᴀɪɴ ʙᴏT", "https://t.me/Flare_Robot"),
         ],
-        [   Button.url("🚑 ᴛʜɪs ʙᴏT", "https://t.me/{BOT_USERNAME}?startgroup=true")
+        [   Button.url("🚑 ᴛʜɪs ʙᴏT", "https://t.me/{BOT_USERNAME}")
         ]
     ]
     await tbot.send_file(event.chat_id, PHOTO, caption=TEXT, buttons=BUTTON)
