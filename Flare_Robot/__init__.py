@@ -93,7 +93,7 @@ if ENV:
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
     BOT_ID = os.environ.get ("BOT_ID", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", @secre_swallowtailbot)
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", "secre_swallowtailbot")
     FLARE_PHOTO = os.environ.get("FLARE_PHOTO", "https://telegra.ph/file/2a171330f0ad1fc02465c.jpg")
     BOT_NAME = os.environ.get("BOT_NAME", None)
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
