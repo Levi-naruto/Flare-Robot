@@ -641,6 +641,7 @@ def baka(update, context):
 
 PHOTO = "https://telegra.ph/file/a5c08a3d10e1f99559f6b.jpg"
 
+
 @register(pattern=("/flare"))
 async def awake(event):
     TEXT = "**♡ I,ᴍ ʏᴏᴜʀ ʟᴏᴠᴇ ʙᴀʙᴇ's 愛** \n\n"
@@ -652,7 +653,7 @@ async def awake(event):
             Button.url("📢 ᴍʏ ᴅᴀʀʟɪɴɢ", "https://t.me/Asta_silva02"),
             Button.url("🚑 ᴍᴀɪɴ ʙᴏT", "https://t.me/Flare_Robot?start="),
         ],
-        [   Button.url("🚑 ᴛʜɪs ʙᴏT", "https://t.me/{BOT_USERNAME}?start=")
+        [   Button.url("🚑 ᴛʜɪs ʙᴏT", "https://t.me/secre_swallowtailbot?start=")
         ]
     ]
     await tbot.send_file(event.chat_id, PHOTO, caption=TEXT, buttons=BUTTON)
