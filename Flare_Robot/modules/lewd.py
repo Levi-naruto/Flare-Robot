@@ -10,6 +10,7 @@ from telethon import __version__ as tlhver
 from pyrogram import __version__ as pyrover
 from time import sleep
 from PIL import Image
+
 from Flare_Robot import BOT_USERNAME
 from Flare_Robot.events import register
 from Flare_Robot import telethn as tbot
@@ -650,8 +651,6 @@ async def awake(event):
         [
             Button.url("📢 ᴍʏ ᴅᴀʀʟɪɴɢ", "https://t.me/Asta_silva02"),
             Button.url("🚑 ᴍᴀɪɴ ʙᴏT", "https://t.me/Flare_Robot"),
-        ],
-        [   Button.url("📢 ᴛʜɪs ʙᴏᴛ", "https://t.me/@BOT_USERNAME?start=")
         ]
     ]
     await tbot.send_file(event.chat_id, PHOTO, caption=TEXT, buttons=BUTTON)
