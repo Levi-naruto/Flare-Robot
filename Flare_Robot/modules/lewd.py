@@ -646,7 +646,7 @@ PHOTO = "https://telegra.ph/file/a5c08a3d10e1f99559f6b.jpg"
 async def awake(event):
     TEXT = "**♡ I,ᴍ ʏᴏᴜʀ ʟᴏᴠᴇ ʙᴀʙᴇ's 愛** \n\n"
     TEXT += f"**♡ I'm Working With sᴇxʏ Speed** \n\n"
-    TEXT += f"**♡ ғʟᴀʀᴇ: LATEST Version** \n\n"
+    TEXT += f"**♡ Nҽɾσ: LATEST Version** \n\n"
     TEXT += f"**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @nero_support** \n\n"
     BUTTON = [
         [
