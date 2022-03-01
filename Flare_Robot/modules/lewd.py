@@ -642,18 +642,18 @@ def baka(update, context):
 PHOTO = "https://telegra.ph/file/a5c08a3d10e1f99559f6b.jpg"
 
 
-@register(pattern=("/flare"))
+@register(pattern=("/nero"))
 async def awake(event):
     TEXT = "**♡ I,ᴍ ʏᴏᴜʀ ʟᴏᴠᴇ ʙᴀʙᴇ's 愛** \n\n"
     TEXT += f"**♡ I'm Working With sᴇxʏ Speed** \n\n"
     TEXT += f"**♡ ғʟᴀʀᴇ: LATEST Version** \n\n"
-    TEXT += f"**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Freia_Support** \n\n"
+    TEXT += f"**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @nero_support** \n\n"
     BUTTON = [
         [
-            Button.url("📢 ᴍʏ ᴅᴀʀʟɪɴɢ", "https://t.me/Asta_silva02"),
-            Button.url("🚑 ᴍᴀɪɴ ʙᴏT", "https://t.me/Flare_Robot?start="),
+            Button.url("📢 ᴍʏ ᴅᴀʀʟɪɴɢ", "https://t.me/lord_nanadaime"),
+            Button.url("🤖 ᴛʜɪs ʙᴏT", "https://t.me/secre_swallowtailbot?start=?"),
         ],
-        [   Button.url("🚑 ᴛʜɪs ʙᴏT", "https://t.me/secre_swallowtailbot?start=")
+        [   Button.url("➕ Add me to your Group", "https://t.me/secre_swallowtailbot?startgroup=True")
         ]
     ]
     await tbot.send_file(event.chat_id, PHOTO, caption=TEXT, buttons=BUTTON)
