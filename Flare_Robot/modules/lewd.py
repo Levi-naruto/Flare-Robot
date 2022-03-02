@@ -639,7 +639,7 @@ def baka(update, context):
     target = "baka"
     msg.reply_video(nekos.img(target))
 
-PHOTO = "https://telegra.ph/file/a5c08a3d10e1f99559f6b.jpg"
+PHOTO = "https://telegra.ph/file/c3075bb2a4d7cd0ee1f82.png"
 
 
 @register(pattern=("/nero"))
@@ -647,13 +647,13 @@ async def awake(event):
     TEXT = "**♡ I,ᴍ ʏᴏᴜʀ ʟᴏᴠᴇ ʙᴀʙᴇ's 愛** \n\n"
     TEXT += f"**♡ I'm Working With sᴇxʏ Speed** \n\n"
     TEXT += f"**♡ Nҽɾσ: LATEST Version** \n\n"
-    TEXT += f"**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @nero_support** \n\n"
+    TEXT += f"**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @nero_x_support** \n\n"
     BUTTON = [
         [
-            Button.url("📢 ᴍʏ ᴅᴀʀʟɪɴɢ", "https://t.me/lord_nanadaime"),
-            Button.url("🤖 ᴛʜɪs ʙᴏT", "https://t.me/secre_swallowtailbot?start=?"),
+            Button.url("📢 ᴍʏ ᴅᴀʀʟɪɴɢ", "https://t.me/lord_seventh_hokage_naruto"),
+            Button.url("🤖 ᴛʜɪs ʙᴏT", "https://t.me/secre_swallowtail_bot?start=?"),
         ],
-        [   Button.url("➕ Add me to your Group", "https://t.me/secre_swallowtailbot?startgroup=True")
+        [   Button.url("➕ Add me to your Group", "https://t.me/secre_swallowtail_bot?startgroup=True")
         ]
     ]
     await tbot.send_file(event.chat_id, PHOTO, caption=TEXT, buttons=BUTTON)
