@@ -248,10 +248,10 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>Appraising...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>Fetching info from the Clover Kingdom DB...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"╒═══「<b> Appraisal results:</b> 」\n"
+        f"╒═══「<b> Mage Information:</b> 」\n"
         f"ID: <code>{user.id}</code>\n"
         f"First Name: {html.escape(user.first_name)}"
     )
@@ -316,7 +316,7 @@ def info(update: Update, context: CallbackContext):
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/Nero_Updates/4">✮</a>]'.format(
+        text += ' [<a href="https://t.me/nero_x_updates/2">✮</a>]'.format(
             bot.username,
         )
 
@@ -439,7 +439,7 @@ def stats(update, context):
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/Nero_Updates)\n\n"
+            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/Nero_x_Updates)\n\n"
             + "╘══「 by [Nαɾυƚσ](https://t.me/{}) 」\n".format(OWNER_USERNAME),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -452,7 +452,7 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Nero_Updates/4)\n\n"
+                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Nero_x_Updates)\n\n"
                 )
                 + "╘══「 by [Nαɾυƚσ](https://t.me/{}) 」\n".format(OWNER_USERNAME)
             ),
@@ -514,7 +514,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Erm... yeah, I only trust the Arcanes to set my bio.",
+                "Erm... yeah, I only trust the Arcane Stage Mages to set my bio.",
             )
             return      
 
