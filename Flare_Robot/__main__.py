@@ -111,7 +111,7 @@ buttons = [
     [
                         InlineKeyboardButton(
                             text=f"Add Nero To Your Group",
-                            url=f"https://telegram.dog/secre_swallowtailbot?startgroup=true")
+                            url=f"https://telegram.dog/secre_swallowtail_bot?startgroup=true")
                     ],
                    [
                        InlineKeyboardButton(text="[► Help ◄]", callback_data="help_back"),
@@ -121,10 +121,10 @@ buttons = [
                     [                  
                        InlineKeyboardButton(
                              text="🚑 Support",
-                             url=f"https://telegram.dog/nero_support"),
+                             url=f"https://telegram.dog/nero_x_support"),
                        InlineKeyboardButton(
                              text="📢 Updates",
-                             url="https://t.me/nero_updates")
+                             url="https://t.me/nero_x_updates")
                      ], 
     ]
 
@@ -205,12 +205,12 @@ async def awake(event):
   ғʟᴀʀᴇ += "**♡ I'm Working With sᴇxʏ Speed**\n\n\n\n"
   ғʟᴀʀᴇ += "**♡ ɴᴇʀᴏ: LATEST Version**\n\n**"
   ғʟᴀʀᴇ += "**♡ My Creator:** [卐⁣༒ℕ₳ᏒꪙƬΘ༒卐](t.me/{OWNER_USERNAME})\n\n"
-  ғʟᴀʀᴇ += "****♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Nero_Support **\n\n"
+  ғʟᴀʀᴇ += "****♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Nero_x_Support **\n\n"
   ғʟᴀʀᴇ += "**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**\n\n"
   FLARE_BUTTON = [
       [
           Button.url("🚑 Support", f"https://t.me/{SUPPORT_CHAT}"),
-          Button.url("📢 Updates", "https://t.me/Nero_Updates")
+          Button.url("📢 Updates", "https://t.me/Nero_x_Updates")
       ]
   ]
   await telethn.send_file(
@@ -276,14 +276,14 @@ def start(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="Support",
-                            url=f"https://telegram.dog/Nero_Support",
+                            url=f"https://telegram.dog/Nero_x_Support",
                         ),
                         InlineKeyboardButton(
                             text="Updates",
-                            url="https://t.me/Nero_Updates",
+                            url="https://t.me/Nero_x_Updates",
                         ),
                         InlineKeyboardButton(
-                          text="HELP", url=f"https://t.me/secre_swallowtailbot?start=help",
+                          text="HELP", url=f"https://t.me/secre_swallowtail_bot?start=help",
                         ),
                     ]
                 ]
@@ -402,7 +402,7 @@ def get_help(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="Help",
-                                url="t.me/secre_swallowtailbot?start=ghelp_{}".format(
+                                url="t.me/secre_swallowtail_bot?start=ghelp_{}".format(
                                     context.bot.username, module,
                                 ),
                             ),
@@ -418,7 +418,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="Help",
-                            url="t.me/secre_swallowtailbot?start=help".format(context.bot.username),
+                            url="t.me/secre_swallowtail_bot?start=help".format(context.bot.username),
                         ),
                     ],
                 ],
